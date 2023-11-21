@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'ItemAppBar.dart';
+import 'ItemBottomNavBar.dart';
 
 class ItemPage extends StatelessWidget {
   const ItemPage({super.key});
@@ -87,6 +88,18 @@ class ItemPage extends StatelessWidget {
                                       size: 18,
                                     ),
                                   ),
+
+                                  Container(
+                                    padding: EdgeInsets.all(5),
+                                    child: Text(
+                                      "01",
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        color:Color.fromARGB(255, 11, 147, 120),
+                                      ),
+                                    ),
+                                  ),
                                   Container(
                                     padding: EdgeInsets.all(5),
                                     decoration: BoxDecoration(
@@ -110,6 +123,63 @@ class ItemPage extends StatelessWidget {
                               )
                           ],
                         ), 
+                      ),
+
+                      Padding(
+                        padding: EdgeInsets.symmetric(vertical: 12),
+                        child: Text(
+                          "This is more detailed description of the product. You can write here more about the product. This is a lengthy description",
+                          style: TextStyle(
+                            fontSize: 17 ,
+                            color: Color.fromARGB(255, 11, 147, 120),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding:EdgeInsets.symmetric(vertical: 8),
+                        child: Row(
+                          children: [
+                            Text(
+                              "Size",
+                              style: TextStyle(
+                                fontSize: 18 ,
+                                fontWeight: FontWeight.bold,
+                                color:Color.fromARGB(255, 11, 147, 120), 
+                              ),
+                            ),
+                            SizedBox(width: 10),
+                            Row(
+                              children: [
+                                for(int i = 1 ; i <= 5 ; i++)
+                                Container(
+                                  height: 30,
+                                  width: 30,
+                                  alignment: Alignment.center,
+                                  margin: EdgeInsets.symmetric(horizontal: 5),
+                                  decoration: BoxDecoration(
+                                    color:Colors.white,
+                                    borderRadius: BorderRadius.circular(30),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.grey.withOpacity(0.5),
+                                        spreadRadius: 2,
+                                        blurRadius: 8,
+                                      )
+                                    ]
+                                  ),
+                                  child: Text(
+                                    "$i" ,
+                                    style: TextStyle(
+                                      fontSize: 18 ,
+                                      fontWeight: FontWeight.bold,
+                                      color:Color.fromARGB(255, 11, 147, 120),  
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
                       )
                     ],
                   ),
@@ -119,6 +189,8 @@ class ItemPage extends StatelessWidget {
             
         ],
       ),
+
+      bottomNavigationBar: ItemBottomNavBar(),
     );
   }
 }

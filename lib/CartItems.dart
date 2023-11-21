@@ -73,7 +73,7 @@ class CartItems extends StatelessWidget {
                         Row(
                           children: [
                             Container(
-                              padding: EdgeInsets.all(4),
+                              padding: EdgeInsets.all(2),
                               decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(20),
