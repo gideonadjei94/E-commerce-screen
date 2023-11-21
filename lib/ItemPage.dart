@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'ItemAppBar.dart';
-import 'ItemBottomNavBar.dart';
+
 
 class ItemPage extends StatelessWidget {
   const ItemPage({super.key});
@@ -21,20 +21,38 @@ class ItemPage extends StatelessWidget {
             ),
 
             Arc(
-              height: 30,
+              height: 35,
               edge: Edge.TOP,
               arcType: ArcType.CONVEY,
               child: Container(
                 width: double.infinity,
                 color: Colors.white,
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  padding: EdgeInsets.symmetric(horizontal: 13),
                   child: Column(
                     children: [
+                         Container(
+                          padding: EdgeInsets.only(top: 45),
+                          child: Row(
+                            children: [
+                              Icon(Icons.location_pin),
+                              Padding(padding: EdgeInsets.only(left: 6 , top: 8),
+                              child: Text(
+                                "Location" , 
+                                style: TextStyle(
+                                  fontSize: 14 , 
+                                  fontWeight: FontWeight.bold
+                                ),
+                              ),
+                              )
+                            ],
+                          ),
+                         ), 
+                      
                       Padding(
                         padding:EdgeInsets.only(
-                          top: 50,
-                          bottom: 20
+                          top: 10,
+                          bottom: 10
                         ),
                         child: Row(
                           children: [
@@ -50,8 +68,26 @@ class ItemPage extends StatelessWidget {
                         ), 
                       ),
 
+                      Row(
+                        children: [
+                          Container(
+                            child: Padding(
+                              padding: EdgeInsets.only( bottom: 6),
+                              child: Text(
+                                "\$70",
+                                style: TextStyle(
+                                  fontSize: 27,
+                                  fontWeight: FontWeight.bold , 
+                                  color: Color.fromARGB(255, 11, 147, 120),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+
                       Padding(
-                        padding: EdgeInsets.only(top: 5 , bottom: 10),
+                        padding: EdgeInsets.only(top: 0 , bottom: 10),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -69,56 +105,7 @@ class ItemPage extends StatelessWidget {
 
                               Row(
                                 children: [
-                                  Container(
-                                    padding: EdgeInsets.all(5),
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(20),
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color: Colors.grey.withOpacity(0.5),
-                                          spreadRadius: 3,
-                                          blurRadius: 10,
-                                          offset: Offset(0, 3)
-                                        )
-                                      ]
-                                    ),
-                                    child: Icon(
-                                      CupertinoIcons.add,
-                                      size: 18,
-                                    ),
-                                  ),
-
-                                  Container(
-                                    padding: EdgeInsets.all(5),
-                                    child: Text(
-                                      "01",
-                                      style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold,
-                                        color:Color.fromARGB(255, 11, 147, 120),
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    padding: EdgeInsets.all(5),
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(20),
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color: Colors.grey.withOpacity(0.5),
-                                          spreadRadius: 3,
-                                          blurRadius: 10,
-                                          offset: Offset(0, 3)
-                                        )
-                                      ]
-                                    ),
-                                    child: Icon(
-                                      CupertinoIcons.minus,
-                                      size: 18,
-                                    ),
-                                  )
+                                  
                                 ],
                               )
                           ],
@@ -126,7 +113,7 @@ class ItemPage extends StatelessWidget {
                       ),
 
                       Padding(
-                        padding: EdgeInsets.symmetric(vertical: 12),
+                        padding: EdgeInsets.symmetric(vertical: 0),
                         child: Text(
                           "This is more detailed description of the product. You can write here more about the product. This is a lengthy description",
                           style: TextStyle(
@@ -135,52 +122,50 @@ class ItemPage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Padding(
-                        padding:EdgeInsets.symmetric(vertical: 8),
-                        child: Row(
-                          children: [
-                            Text(
-                              "Size",
-                              style: TextStyle(
-                                fontSize: 18 ,
-                                fontWeight: FontWeight.bold,
-                                color:Color.fromARGB(255, 11, 147, 120), 
-                              ),
-                            ),
-                            SizedBox(width: 10),
-                            Row(
-                              children: [
-                                for(int i = 1 ; i <= 5 ; i++)
-                                Container(
-                                  height: 30,
-                                  width: 30,
-                                  alignment: Alignment.center,
-                                  margin: EdgeInsets.symmetric(horizontal: 5),
-                                  decoration: BoxDecoration(
-                                    color:Colors.white,
-                                    borderRadius: BorderRadius.circular(30),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.grey.withOpacity(0.5),
-                                        spreadRadius: 2,
-                                        blurRadius: 8,
-                                      )
-                                    ]
-                                  ),
-                                  child: Text(
-                                    "$i" ,
-                                    style: TextStyle(
-                                      fontSize: 18 ,
-                                      fontWeight: FontWeight.bold,
-                                      color:Color.fromARGB(255, 11, 147, 120),  
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                          ],
-                        ),
-                      )
+                      Row(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(top: 18 , bottom: 18),
+                            width: 60,
+                            height: 60,
+                            alignment: Alignment.center,
+                             decoration: BoxDecoration(
+                                          color: Color.fromARGB(255, 11, 147, 120),
+                                          borderRadius: BorderRadius.circular(20)
+                                        ),
+                                        child: IconButton(
+                                          onPressed: (){}, 
+                                        icon: Icon(
+                                          Icons.phone,
+                                          color: Colors.white,
+                                          size: 30,
+                                          ),
+                                        ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(left: 15),
+                            width: 300,
+                            height: 60,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                                          // color: Color.fromARGB(255, 11, 147, 120),
+                                          borderRadius: BorderRadius.circular(20),
+                                          border: Border.all(
+                                            color: Color.fromARGB(255, 11, 147, 120),
+                                            width: 3,
+                                          )
+                                        ),
+                                        child: Text(
+                                          "Start a Chat",
+                                          style: TextStyle(
+                                            fontSize: 18 ,
+                                            fontWeight: FontWeight.bold , 
+                                            color: Color.fromARGB(255, 11, 147, 120),
+                                          ),
+                                        ),
+                                         ),
+                        ],
+                      ),
                     ],
                   ),
                 ),
@@ -190,7 +175,6 @@ class ItemPage extends StatelessWidget {
         ],
       ),
 
-      bottomNavigationBar: ItemBottomNavBar(),
     );
   }
 }

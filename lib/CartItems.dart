@@ -48,6 +48,13 @@ class CartItems extends StatelessWidget {
                           color:Color.fromARGB(255, 11, 147, 120), 
                         ),
                       ),
+
+                      Text(
+                        "Product description..",
+                        style: TextStyle(
+                          color:Color.fromARGB(255, 11, 147, 120),
+                        ),
+                      ),
                       Text(
                         "\$70" ,
                         style: TextStyle(
@@ -70,57 +77,7 @@ class CartItems extends StatelessWidget {
                         color: Colors.red,
                         ),
       
-                        Row(
-                          children: [
-                            Container(
-                              padding: EdgeInsets.all(2),
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(20),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.grey.withOpacity(0.5),
-                                    spreadRadius: 1 ,
-                                    blurRadius: 10,
-                                  )
-                                ]
-                              ),
-                              child: Icon(
-                                CupertinoIcons.plus,
-                                size: 18,
-                              ),
-                            ),
-                            Container(
-                              margin: EdgeInsets.symmetric(horizontal: 10),
-                              child: Text(
-                                "01" ,
-                                style: TextStyle(
-                                  fontSize: 16 ,
-                                  fontWeight: FontWeight.bold,
-                                  color: Color.fromARGB(255, 11, 147, 120),
-                                ),
-                              ),
-                            ),
-                            Container(
-                              padding: EdgeInsets.all(4),
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(20),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.grey.withOpacity(0.5),
-                                    spreadRadius: 1 ,
-                                    blurRadius: 10,
-                                  )
-                                ]
-                              ),
-                              child: Icon(
-                                CupertinoIcons.minus,
-                                size: 18,
-                              ),
-                            )
-                          ],
-                        ),
+                        
                       ],
                     ), 
                   ),

@@ -56,19 +56,43 @@ class ShopAppBar extends StatelessWidget {
               child:
                InkWell(
                 onTap: (){
-                  Navigator.push(
-                     context,
-                     MaterialPageRoute(builder: (context) => CartPage()),
-                  );
+                 
                 },
                 child: Icon(
-                  Icons.shopping_bag_outlined,
+                  Icons.notifications_none,
                   size: 30,
                   color: Color.fromARGB(255, 11, 147, 120),
                   ),
               ),
             ),
-            SizedBox(width: 5),
+            // SizedBox(width: 5),
+           
+            
+            PopupMenuButton(
+              icon: Icon(
+                Icons.more_vert,
+                color:Color.fromARGB(255, 11, 147, 120),
+                ), 
+              onSelected: (String result){
+                if(result == 'option1'){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => CartPage()),
+                  );
+                }
+              },
+              
+              itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
+                PopupMenuItem<String>(
+                  value: 'option1',
+                  child: Text('Saved'),
+                ),
+                PopupMenuItem<String>(
+                  value: 'option2',
+                  child: Text('Sort by'),
+                ),
+              ]
+            )
             
             
              ],

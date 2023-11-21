@@ -41,10 +41,10 @@ class Items extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Icon(
-                    Icons.favorite_border,
-                    color: Colors.red
-                    ),
+                  // Icon(
+                  //   Icons.favorite_border,
+                  //   color: Colors.red
+                  //   ),
                 ],
               ),
 
@@ -83,7 +83,7 @@ class Items extends StatelessWidget {
                 child: Text(
                   'Write description of product',
                   style: TextStyle(
-                    fontSize: 10,
+                    fontSize: 12,
                     color: Color.fromARGB(255, 11, 147, 120), 
                   ),
                   ),
@@ -97,7 +97,7 @@ class Items extends StatelessWidget {
                     Text(
                     '\$70',
                     style: TextStyle(
-                      fontSize: 14 , 
+                      fontSize: 16, 
                       fontWeight: FontWeight.bold,
                       color: Color.fromARGB(255, 11, 147, 120), 
                     ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:market/CartPage.dart';
 
 class ItemAppBar extends StatelessWidget {
   const ItemAppBar({super.key});
@@ -7,7 +8,7 @@ class ItemAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      padding: EdgeInsets.all(23),
+      padding: EdgeInsets.all(21),
       child: Row(
         children: [
           InkWell(
@@ -33,11 +34,13 @@ class ItemAppBar extends StatelessWidget {
             ),
           ),
           Spacer(),
-          Icon(
-            Icons.favorite,
-            size: 30,
+          IconButton(
+            onPressed: (){},
+            icon: Icon(Icons.bookmark_border),
             color: Colors.red,
-          ),
+            iconSize: 30,
+            ),
+          
         ],
       ),
     );

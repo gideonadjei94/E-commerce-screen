@@ -24,7 +24,7 @@ class CartAppBar extends StatelessWidget {
           Padding(padding: 
           EdgeInsets.only(left: 20),
           child: Text(
-            'Cart',
+            'Saved',
             style: TextStyle(
               fontSize: 25,
               fontWeight: FontWeight.bold,
