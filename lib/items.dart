@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'ItemPage.dart';
 
 class Items extends StatelessWidget {
   const Items({super.key});
@@ -48,7 +49,12 @@ class Items extends StatelessWidget {
               ),
 
               InkWell(
-                onTap: (){},
+                onTap: (){
+                   Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => ItemPage()),
+          );
+                },
                 child: Container(
                   margin: EdgeInsets.all(10),
                   child: Image.asset(

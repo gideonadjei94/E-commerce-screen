@@ -1,5 +1,6 @@
-//  import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
+import 'CartPage.dart';
+
 
 //
 // import 'package:flutter_svg/flutter_svg.dart';
@@ -52,8 +53,14 @@ class ShopAppBar extends StatelessWidget {
                   color: Colors.white
                 ),
                 ),
-              child: InkWell(
-                onTap: (){},
+              child:
+               InkWell(
+                onTap: (){
+                  Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => CartPage()),
+                  );
+                },
                 child: Icon(
                   Icons.shopping_bag_outlined,
                   size: 30,
@@ -62,24 +69,7 @@ class ShopAppBar extends StatelessWidget {
               ),
             ),
             SizedBox(width: 5),
-            Badge(
-              
-              textColor: Colors.white,
-               padding: EdgeInsets.fromLTRB(7, 1, 7,1),
-              label: Text(
-                '2',
-              
-                ),
-                isLabelVisible: true,
-              child: InkWell(
-                onTap: (){},
-                child: Icon(
-                  Icons.notifications_none,
-                  size: 30,
-                  color: Color.fromARGB(255, 11, 147, 120),
-                  ),
-              ),
-            ),
+            
             
              ],
       ),
