@@ -20,7 +20,7 @@ class ShopAppBar extends StatelessWidget {
               Navigator.of(context).pop();
             },
             icon: Icon(
-            Icons.navigate_before,
+            Icons.arrow_back,
             size: 30,
             color: Color.fromARGB(255, 11, 147, 120),
             ),
@@ -42,7 +42,10 @@ class ShopAppBar extends StatelessWidget {
             
             Badge(
               textColor: Colors.red,
-              padding: EdgeInsets.all(7),
+              padding: EdgeInsets.fromLTRB(7, 1, 7,1),
+             
+              smallSize: 2.0,
+              // largeSize: 6.0,
               label: Text(
                 '3',
                 style: TextStyle(
@@ -62,7 +65,7 @@ class ShopAppBar extends StatelessWidget {
             Badge(
               
               textColor: Colors.white,
-              padding: EdgeInsets.all(7),
+               padding: EdgeInsets.fromLTRB(7, 1, 7,1),
               label: Text(
                 '2',
               
