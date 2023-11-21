@@ -6,6 +6,6 @@ A new Flutter project.
 
 
 
-A simple e-commerce app which gets interested buyer of a product in-touch with seller.
+A simple e-commerce app which gets interested buyer of a product in-touch with the seller.
 
 
