@@ -3,6 +3,7 @@ import 'Categories.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 import 'ShopAppbar.dart';
 import 'items.dart';
+import 'sell.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -120,7 +121,12 @@ class _ShopState extends State<Shop> {
 
       floatingActionButton: FloatingActionButton(
         backgroundColor:Color.fromARGB(255, 11, 147, 120),
-        onPressed: (){},
+        onPressed: (){
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Sell()),
+          );
+        },
         child: Icon(
           Icons.sell_outlined ,
           color: Colors.white,

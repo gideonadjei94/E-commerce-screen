@@ -78,7 +78,7 @@ class ItemPage extends StatelessWidget {
                                 style: TextStyle(
                                   fontSize: 27,
                                   fontWeight: FontWeight.bold , 
-                                  color: Color.fromARGB(255, 11, 147, 120),
+                                  color: Colors.red,
                                 ),
                               ),
                             ),
@@ -151,7 +151,7 @@ class ItemPage extends StatelessWidget {
                                           // color: Color.fromARGB(255, 11, 147, 120),
                                           borderRadius: BorderRadius.circular(20),
                                           border: Border.all(
-                                            color: Color.fromARGB(255, 11, 147, 120),
+                                            color: Colors.red,
                                             width: 3,
                                           )
                                         ),
@@ -160,7 +160,7 @@ class ItemPage extends StatelessWidget {
                                           style: TextStyle(
                                             fontSize: 18 ,
                                             fontWeight: FontWeight.bold , 
-                                            color: Color.fromARGB(255, 11, 147, 120),
+                                            color: Colors.red,
                                           ),
                                         ),
                                          ),

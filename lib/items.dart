@@ -41,10 +41,10 @@ class Items extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // Icon(
-                  //   Icons.favorite_border,
-                  //   color: Colors.red
-                  //   ),
+                  Icon(
+                    Icons.bookmark_border,
+                    color: Colors.red
+                    ),
                 ],
               ),
 
