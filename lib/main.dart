@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screen_lock/flutter_screen_lock.dart';
 import 'shop.dart';
 
 
@@ -11,6 +12,9 @@ void main() {
     theme: ThemeData(
       primaryColor: Color.fromARGB(255, 11, 147, 120),
       fontFamily: 'Gordita',
+      textSelectionTheme: TextSelectionThemeData(
+        cursorColor: Color.fromARGB(255, 11, 147, 120),
+      )
       
     ),
   ));
@@ -40,6 +44,11 @@ class _MarketState extends State<Market> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Color.fromARGB(255, 11, 147, 120),
         onPressed: (){
+          screenLock(
+            context: context,
+             correctString: "1234",
+             canCancel: true,
+             );
            Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => Shop()),

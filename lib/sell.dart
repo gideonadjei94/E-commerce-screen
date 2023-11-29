@@ -3,6 +3,7 @@ import 'package:market/categories%20screens/Electronics.dart';
 import 'package:market/categories%20screens/fashion.dart';
 import 'package:market/categories%20screens/food.dart';
 import 'package:market/filepicker.dart';
+import 'main.dart';
 
 class Sell extends StatefulWidget {
   const Sell({super.key});
@@ -101,7 +102,8 @@ class _SellState extends State<Sell> {
                 DropdownMenuItem(child: Text('Beauty & Cosmetics') , value: "4"),
                 DropdownMenuItem(child: Text('Fashion') , value: "5"),
                 DropdownMenuItem(child: Text('Hostels') , value: "6"),
-                DropdownMenuItem(child: Text('Repairs & Constructon') , value: "7"),
+                DropdownMenuItem(child: Text('Repairs & Other services') , value: "7"),
+                DropdownMenuItem(child: Text('Others') , value: "8"),
               ],
              ),
              Container(
@@ -218,7 +220,10 @@ class _SellState extends State<Sell> {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8)
                   ),
-                  labelText: 'Product Title*'
+                  labelText: 'Product Title*',
+                  labelStyle: TextStyle(
+                    color:Color.fromARGB(255, 11, 147, 120),
+                  )
                 ),
                          
                ),
@@ -238,6 +243,9 @@ class _SellState extends State<Sell> {
                     borderRadius: BorderRadius.circular(8)
                   ),
                   labelText: 'Description*',
+                   labelStyle: TextStyle(
+                    color:Color.fromARGB(255, 11, 147, 120),
+                  )
                   
                 ),
                          
@@ -281,39 +289,7 @@ class _SellState extends State<Sell> {
                 ],
                ),
              ),
-    
-             Container(
-              margin: EdgeInsets.only(top: 16),
-              child: DropdownButtonFormField(
-                icon: Icon(Icons.navigate_next),
-                decoration: InputDecoration(
-                   focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color:Color.fromARGB(255, 11, 147, 120),
-                  width: 2.0)
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8)
-                )
-              ),
-              onChanged: (v){},
-              value: _value,
-              items: const [
-                DropdownMenuItem(child: Text('Region*') , value: "0"),
-                DropdownMenuItem(child: Text('Greater Accra') , value: "1"),
-                DropdownMenuItem(child: Text('Ashanti') , value: "2"),
-                DropdownMenuItem(child: Text('Central') , value: "3"),
-                DropdownMenuItem(child: Text('western') , value: "4"),
-                DropdownMenuItem(child: Text('Eastern') , value: "5"),
-                DropdownMenuItem(child: Text('Volta') , value: "6"),
-                DropdownMenuItem(child: Text('Northern') , value: "7"),
-                DropdownMenuItem(child: Text('Upper East') , value: "8"),
-                DropdownMenuItem(child: Text('Upper West') , value: "9"),
-                DropdownMenuItem(child: Text('Brong Ahafo') , value: "10"),
-                
-              ],
-              ),
-             ),
-        
+
              Container(
               margin: EdgeInsets.only(top: 16),
                child: TextField(
@@ -328,7 +304,9 @@ class _SellState extends State<Sell> {
                     borderRadius: BorderRadius.circular(8)
                   ),
                   labelText: 'Location*',
-                  
+                   labelStyle: TextStyle(
+                    color:Color.fromARGB(255, 11, 147, 120),
+                  )
                 ),
                          
                ),
@@ -358,7 +336,10 @@ class _SellState extends State<Sell> {
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8)
                     ),
-                    labelText: "Price* "
+                    labelText: "Price* ",
+                     labelStyle: TextStyle(
+                    color:Color.fromARGB(255, 11, 147, 120),
+                  )
                   ),
                            
                  ),
@@ -448,7 +429,10 @@ class _SellState extends State<Sell> {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8)
                   ),
-                  labelText: "Seller's Name* "
+                  labelText: "Seller's Name* ",
+                   labelStyle: TextStyle(
+                    color:Color.fromARGB(255, 11, 147, 120),
+                  )
                 ),
                          
                ),),
@@ -467,7 +451,10 @@ class _SellState extends State<Sell> {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8)
                   ),
-                  labelText: 'Phone Number*'
+                  labelText: 'Phone Number*',
+                   labelStyle: TextStyle(
+                    color:Color.fromARGB(255, 11, 147, 120),
+                  )
                 ),
                          
                ),),
